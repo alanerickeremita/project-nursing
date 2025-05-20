@@ -1,0 +1,49 @@
+mat-icon {
+    color: white;
+    position: center;
+}
+
+.button-menu {
+    background-color: 25509b;
+    color: white;
+}
+
+.button-menu:hover {
+    background-color: #1a396e;
+    color: white;
+}
+
+.button-menu-item {
+    color: #1a396e;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.logo-img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+mat-toolbar {
+    background: linear-gradient(to right, #1a396e, #25509b);
+    min-height: 100px;
+    align-items: center;
+}
+
+mat-toolbar .logo {
+    color: white;
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+a.mat-button:hover {
+    background-color: rgba(255, 255, 255, 0.233);
+}
