@@ -1,22 +1,16 @@
-<mat-toolbar color="primary">
-
+<mat-toolbar color="primary" class="app-toolbar">
   <span class="logo">
     <img class="logo-img" mat-card-image src="favicon.png">
     {{ title }}
   </span>
-
   <span class="spacer"></span>
-
-  <button class="button-menu" mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon>
-  </button>
+  <button class="button-menu" mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
   <mat-menu #menu="matMenu">
-    <button class="button-menu-item" mat-menu-item routerLink="">Inicio</button>
-    <button class="button-menu-item" mat-menu-item routerLink="/sobre">Sobre a equipe</button>
-    <button class="button-menu-item" mat-menu-item routerLink="/proposito">Nosso Propósito</button>
-    <button class="button-menu-item" mat-menu-item routerLink="/objetivo">Objetivo</button>
-    <button class="button-menu-item" mat-menu-item routerLink="/dicas">Dicas</button>
-    <button class="button-menu-item" mat-menu-item routerLink="/cursos">Cursos</button>
-    <button class="button-menu-item" mat-menu-item routerLink="/casos">Casos</button>
+    <a class="button-menu-item" mat-menu-item href="#sobre">Sobre a equipe</a>
+    <a class="button-menu-item" mat-menu-item href="#objetivo">Objetivo</a>
+    <a class="button-menu-item" mat-menu-item href="#comunicacao">Comunicação Assertiva</a>
+    <a class="button-menu-item" mat-menu-item href="#cursos">Cursos</a>
+    <a class="button-menu-item" mat-menu-item href="#casos">Casos</a>
   </mat-menu>
 </mat-toolbar>
 <router-outlet></router-outlet>

@@ -9,13 +9,38 @@ mat-card {
 }
 
 mat-card-title {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
 }
 
 mat-card-content {
-    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
     margin-top: 10px;
-    flex-direction: column;
-    align-items: center;
+    text-align: justify;
+}
+
+mat-list-item {
+    align-items: flex-start;      /* Alinha o conteúdo no topo */
+    height: auto !important;      /* Permite altura variável */
+    min-height: 56px;             /* Altura mínima padrão */
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+[matLine] {
+    display: block;
+    width: 100%;
+    white-space: normal;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.title{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
