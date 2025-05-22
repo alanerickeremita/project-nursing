@@ -13,5 +13,6 @@ export const routes: Routes = [
   { path: 'cursos', component: StudyComponent },
   { path: 'dicas', component: TipsComponent },
   { path: 'casos', component: CasesComponent },
+  { path: 'feedback', loadComponent: () => import('./pages/form/form.component').then(m => m.FormComponent) },
   { path: '**', redirectTo: '' }
 ];

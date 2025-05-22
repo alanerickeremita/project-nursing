@@ -1,0 +1,32 @@
+<mat-card>
+    <mat-card-title>Feedback</mat-card-title>
+    <mat-card-content>
+        <p>Compartilhe sua opinião sobre as medidas que poderiam ter sido adotadas para prevenir os erros apresentados
+            nesses casos.</p>
+
+        <form [formGroup]="feedbackForm" (ngSubmit)="enviarFeedback()" class="form-container">
+            <mat-form-field appearance="outline" class="full-width">
+                <textarea matInput formControlName="texto" rows="4"></textarea>
+            </mat-form-field>
+
+            <div class="button-container">
+                <button mat-raised-button color="primary" type="submit" [disabled]="feedbackForm.invalid">
+                    Enviar
+                </button>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>
+
+<mat-card class="mensagem-card" *ngIf="mostrarMensagem" #mensagemCard tabindex="-1">
+  <div class="mensagem-header">
+    <span>Legal demais! Vale lembrar também que a ausência de conferência rigorosa, padronização e cumprimento das metas internacionais na enfermagem tem
+            provocado diversas falhas, como erros na administração de medicamentos, comunicação ineficaz e aumento das
+            infecções hospitalares. Essas falhas comprometem diretamente a segurança dos pacientes e a qualidade do
+            atendimento, evidenciando a necessidade de protocolos claros e de treinamento contínuo para garantir
+            cuidados eficientes, seguros e humanizados.</span>
+    <button mat-icon-button (click)="fecharMensagem()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+</mat-card>

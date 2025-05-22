@@ -5,11 +5,12 @@ import { AboutComponent } from "../about/about.component";
 import { TipsComponent } from "../tips/tips.component";
 import { StudyComponent } from "../study/study.component";
 import { CasesComponent } from "../cases/cases.component";
+import { FormComponent } from "../form/form.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MatCardModule, GoalComponent, AboutComponent, TipsComponent, StudyComponent, CasesComponent],
+  imports: [MatCardModule, GoalComponent, AboutComponent, TipsComponent, StudyComponent, CasesComponent, FormComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })

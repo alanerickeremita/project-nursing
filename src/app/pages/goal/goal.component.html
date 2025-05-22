@@ -1,23 +1,16 @@
 <section id="objetivo">
     <mat-card>
-        <mat-card-title>Objetivo</mat-card-title>
+        <mat-card-title>Nossa Missão!</mat-card-title>
         <mat-card-content>
-            O site foi criado com o objetivo de ser uma plataforma informativa e educativa, voltada à promoção da
-            comunicação efetiva no contexto da saúde, em consonância com as metas internacionais de segurança do
-            paciente. O
-            projeto busca disponibilizar recursos interativos e acessíveis, com o intuito de contribuir para a formação
-            e o
-            aprimoramento das competências comunicacionais de profissionais e estudantes da área da saúde, favorecendo
-            uma
-            prática assistencial mais segura, eficiente e humanizada.
-        </mat-card-content>
-    </mat-card>
-
-    <mat-card>
-        <mat-card-title>Nosso Propósito</mat-card-title>
-        <mat-card-content>
-            Por meio deste espaço, esperamos contribuir para o estudo e o aprimoramento do conhecimento de todos os
-            usuários, oferecendo conteúdos que inspirem, informem e incentivem boas práticas em saúde.
-        </mat-card-content>
+            Conheçam nosso objetivo e nosso propósito.
+        </mat-card-content> 
+        <owl-carousel-o [options]="{items: 1, dots: true, nav: false, loop: true}">
+            <ng-template carouselSlide>
+                <img src="../../../assets/OBJETIVO.JPG" alt="Objetivo" />
+            </ng-template>
+            <ng-template carouselSlide>
+                <img src="../../../assets/PROPOSITO.JPG" alt="Propósito" />
+            </ng-template>
+        </owl-carousel-o>
     </mat-card>
 </section>
