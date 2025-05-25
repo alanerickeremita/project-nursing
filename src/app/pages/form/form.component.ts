@@ -40,16 +40,12 @@ export class FormComponent {
 
   enviarFeedback() {
     const feedback = this.feedbackForm.value;
-    this.http.post('http://localhost:3000/sugestoes', feedback).subscribe(() => {
+
+    if(feedback.texto != null || feedback.texto.trim() != '') {
       this.feedbackForm.reset();
       this.mostrarMensagem = true;
-
-      // Espera a view atualizar, depois foca o card
-      setTimeout(() => {
-        this.mensagemCardRef?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        // opcional: this.mensagemCardRef?.nativeElement.focus();
-      });
-    });
+      this.mensagemCardRef?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
   }
 
   fecharMensagem() {
