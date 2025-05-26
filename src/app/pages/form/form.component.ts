@@ -42,9 +42,15 @@ export class FormComponent {
     const feedback = this.feedbackForm.value;
 
     if(feedback.texto != null || feedback.texto.trim() != '') {
+      this.http.post('https://project-nursing-db.onrender.com/sugestoes', feedback).subscribe(() => {
       this.feedbackForm.reset();
       this.mostrarMensagem = true;
-      this.mensagemCardRef?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // Espera a view atualizar, depois foca o card
+      setTimeout(() => {
+        this.mensagemCardRef?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        this.mensagemCardRef?.nativeElement.focus();
+      });
+    });
     }
   }
 
